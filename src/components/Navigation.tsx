@@ -1,0 +1,78 @@
+import React from 'react';
+import { Brain, Menu, X, Calculator, TrendingUp, HelpCircle, User } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  return (
+    <nav className="bg-white/80 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <img src="/Logo.png" alt="AI Student Loan Calculator" className="w-10 h-10" />
+            <div>
+              <h1 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                AI Student Loan Calculator
+              </h1>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <Calculator className="w-4 h-4" />
+              <span>Calculator</span>
+            </a>
+            <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <TrendingUp className="w-4 h-4" />
+              <span>Insights</span>
+            </a>
+            <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <HelpCircle className="w-4 h-4" />
+              <span>Help</span>
+            </a>
+            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all">
+              <User className="w-4 h-4" />
+              <span>Sign In</span>
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200">
+            <div className="flex flex-col space-y-4">
+              <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                <Calculator className="w-4 h-4" />
+                <span>Calculator</span>
+              </a>
+              <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                <TrendingUp className="w-4 h-4" />
+                <span>Insights</span>
+              </a>
+              <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+                <HelpCircle className="w-4 h-4" />
+                <span>Help</span>
+              </a>
+              <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit">
+                <User className="w-4 h-4" />
+                <span>Sign In</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
