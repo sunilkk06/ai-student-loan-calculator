@@ -135,12 +135,7 @@ const LoanCalculator: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
-            <div className="p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mr-4">
-              <Brain className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              AI Student Loan Calculator
-            </h1>
+            <img src="/Logo.png" alt="AI Student Loan Calculator" className="h-24 w-auto" />
           </div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Get intelligent insights and optimize your student loan repayment strategy with AI-powered recommendations
