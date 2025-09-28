@@ -10,6 +10,8 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center">
               <img src="/Logo.png" alt="AI Student Loan Calculator" className="h-12 w-auto" />
+            </div>
+            <p className="text-gray-300 text-sm leading-relaxed">
               Empowering students with AI-driven insights to make informed decisions about their educational loans and financial future.
             </p>
             <div className="flex space-x-4">
