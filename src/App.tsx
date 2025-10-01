@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoanCalculator from './components/LoanCalculator';
+import About from './components/About';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <section id="calculator">
           <LoanCalculator />
         </section>
+        <About />
         <section id="insights" className="min-h-screen bg-gray-50 flex items-center justify-center">
           <div className="container mx-auto px-4 py-16 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">AI Insights</h2>

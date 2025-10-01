@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Menu, X, Calculator, TrendingUp, HelpCircle, User } from 'lucide-react';
+import { Brain, Menu, X, Calculator, TrendingUp, HelpCircle, User, Info } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -18,6 +18,10 @@ const Navigation: React.FC = () => {
             <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <Calculator className="w-4 h-4" />
               <span>Calculator</span>
+            </a>
+            <a href="#about" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+              <Info className="w-4 h-4" />
+              <span>About</span>
             </a>
             <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <TrendingUp className="w-4 h-4" />
@@ -49,6 +53,10 @@ const Navigation: React.FC = () => {
               <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <Calculator className="w-4 h-4" />
                 <span>Calculator</span>
+              </a>
+              <a href="#about" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+                <Info className="w-4 h-4" />
+                <span>About</span>
               </a>
               <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <TrendingUp className="w-4 h-4" />
