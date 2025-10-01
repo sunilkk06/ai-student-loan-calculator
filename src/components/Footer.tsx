@@ -8,9 +8,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center">
-              <img src="/Logo.png" alt="AI Student Loan Calculator" className="h-12 w-auto" />
-            </div>
+            <a href="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
+              <img src="/Logo.svg" alt="AI Student Loan Calculator" className="h-12 w-auto" />
+            </a>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering students with AI-driven insights to make informed decisions about their educational loans and financial future.
             </p>
