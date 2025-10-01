@@ -44,8 +44,6 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          )
-          }
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
@@ -62,7 +60,9 @@ const Navigation: React.FC = () => {
               </a>
               <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit">
                 <User className="w-4 h-4" />
-            <img src="/Logo.png" alt="AI Student Loan Calculator" className="h-16 w-auto" />
+                <span>Sign In</span>
+              </button>
+            </div>
           </div>
         )}
       </div>
