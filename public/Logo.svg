@@ -1,0 +1,69 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brain Icon (left side) -->
+  <g transform="translate(10, 20)">
+    <!-- Brain outline -->
+    <path d="M12 4C10.5 4 9 4.5 8 5.5C7 6.5 6.5 8 6.5 9.5C6.5 10 6.6 10.5 6.7 11C5.7 11.3 5 12.2 5 13.3C5 14 5.3 14.6 5.8 15C5.3 15.5 5 16.2 5 17C5 18.7 6.3 20 8 20C8.5 20 9 19.9 9.4 19.6C9.9 20.5 10.9 21 12 21C13.1 21 14.1 20.5 14.6 19.6C15 19.9 15.5 20 16 20C17.7 20 19 18.7 19 17C19 16.2 18.7 15.5 18.2 15C18.7 14.6 19 14 19 13.3C19 12.2 18.3 11.3 17.3 11C17.4 10.5 17.5 10 17.5 9.5C17.5 8 17 6.5 16 5.5C15 4.5 13.5 4 12 4Z"
+          stroke="url(#brainGradient)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Brain details -->
+    <circle cx="10" cy="10" r="1" fill="url(#brainGradient)"/>
+    <circle cx="14" cy="10" r="1" fill="url(#brainGradient)"/>
+    <circle cx="10" cy="14" r="1" fill="url(#brainGradient)"/>
+    <circle cx="14" cy="14" r="1" fill="url(#brainGradient)"/>
+  </g>
+
+  <!-- Calculator Window -->
+  <g transform="translate(30, 20)">
+    <!-- Window background -->
+    <rect x="0" y="0" width="50" height="60" rx="6" fill="white" stroke="url(#windowGradient)" stroke-width="2.5"/>
+
+    <!-- Window header -->
+    <rect x="0" y="0" width="50" height="12" rx="6" fill="url(#windowGradient)"/>
+    <rect x="0" y="6" width="50" height="6" fill="url(#windowGradient)"/>
+
+    <!-- Header dot -->
+    <circle cx="42" cy="6" r="2" fill="white"/>
+
+    <!-- Chart line inside window -->
+    <g transform="translate(8, 25)">
+      <polyline points="0,20 8,18 16,12 24,15 32,8"
+                stroke="url(#chartGradient)" stroke-width="2.5" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Data points -->
+      <circle cx="0" cy="20" r="2.5" fill="url(#chartGradient)"/>
+      <circle cx="8" cy="18" r="2.5" fill="url(#chartGradient)"/>
+      <circle cx="16" cy="12" r="2.5" fill="url(#chartGradient)"/>
+      <circle cx="24" cy="15" r="2.5" fill="url(#chartGradient)"/>
+      <circle cx="32" cy="8" r="2.5" fill="url(#chartGradient)"/>
+    </g>
+  </g>
+
+  <!-- AI Text -->
+  <text x="100" y="55" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#003366">AI</text>
+
+  <!-- Student Loan Calculator Text -->
+  <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#003366">Student</text>
+  <text x="168" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="url(#textGradient)">Loan Calculator</text>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
