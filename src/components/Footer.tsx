@@ -15,13 +15,13 @@ const Footer: React.FC = () => {
               Empowering students with AI-driven insights to make informed decisions about their educational loans and financial future.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors">
+              <a href="#" className="p-2 bg-gray-800 rounded-lg hover:bg-blue-600 transition-colors cursor-pointer">
                 <Github className="w-4 h-4" />
               </a>
             </div>
@@ -32,27 +32,27 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#calculator" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#calculator" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   Loan Calculator
                 </a>
               </li>
               <li>
-                <a href="#insights" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#insights" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   AI Insights
                 </a>
               </li>
               <li>
-                <a href="#comparison" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#comparison" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   Loan Comparison
                 </a>
               </li>
               <li>
-                <a href="#refinancing" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#refinancing" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   Refinancing Guide
                 </a>
               </li>
               <li>
-                <a href="#resources" className="text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#resources" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   Educational Resources
                 </a>
               </li>
@@ -64,25 +64,25 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#help" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#help" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   <HelpCircle className="w-4 h-4" />
                   <span>Help Center</span>
                 </a>
               </li>
               <li>
-                <a href="#contact" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#contact" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   <Mail className="w-4 h-4" />
                   <span>Contact Us</span>
                 </a>
               </li>
               <li>
-                <a href="#privacy" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#privacy" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   <Shield className="w-4 h-4" />
                   <span>Privacy Policy</span>
                 </a>
               </li>
               <li>
-                <a href="#terms" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm">
+                <a href="#terms" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   <FileText className="w-4 h-4" />
                   <span>Terms of Service</span>
                 </a>
@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
                   placeholder="Enter your email"
                   className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-sm focus:outline-none focus:border-blue-500"
                 />
-                <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-r-lg hover:shadow-lg transition-all text-sm font-medium">
+                <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-r-lg hover:shadow-lg transition-all text-sm font-medium cursor-pointer">
                   Subscribe
                 </button>
               </div>

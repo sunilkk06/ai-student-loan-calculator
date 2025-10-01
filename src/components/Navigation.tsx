@@ -15,19 +15,19 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <Calculator className="w-4 h-4" />
               <span>Calculator</span>
             </a>
-            <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <TrendingUp className="w-4 h-4" />
               <span>Insights</span>
             </a>
-            <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <HelpCircle className="w-4 h-4" />
               <span>Help</span>
             </a>
-            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all">
+            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all cursor-pointer">
               <User className="w-4 h-4" />
               <span>Sign In</span>
             </button>
@@ -46,19 +46,19 @@ const Navigation: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <Calculator className="w-4 h-4" />
                 <span>Calculator</span>
               </a>
-              <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <TrendingUp className="w-4 h-4" />
                 <span>Insights</span>
               </a>
-              <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors">
+              <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <HelpCircle className="w-4 h-4" />
                 <span>Help</span>
               </a>
-              <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit">
+              <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit cursor-pointer">
                 <User className="w-4 h-4" />
                 <span>Sign In</span>
               </button>
