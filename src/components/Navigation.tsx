@@ -9,9 +9,9 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <a href="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
             <img src="/Logo.svg" alt="AI Student Loan Calculator" className="h-16 w-auto" />
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
