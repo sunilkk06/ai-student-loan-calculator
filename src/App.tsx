@@ -5,6 +5,8 @@ import LoanCalculator from './components/LoanCalculator';
 import About from './components/About';
 import AIInsights from './components/AIInsights';
 import LoanComparison from './components/LoanComparison';
+import RefinancingGuide from './components/RefinancingGuide';
+import HelpCenter from './components/HelpCenter';
 
 function App() {
   return (
@@ -17,12 +19,8 @@ function App() {
         <About />
         <AIInsights />
         <LoanComparison />
-        <section id="help" className="min-h-screen bg-white flex items-center justify-center">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Help Center</h2>
-            <p className="text-xl text-gray-600">Find answers to common questions - Coming Soon</p>
-          </div>
-        </section>
+        <RefinancingGuide />
+        <HelpCenter />
       </main>
       <Footer />
     </div>

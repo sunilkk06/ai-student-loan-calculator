@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Menu, X, Calculator, TrendingUp, HelpCircle, User, Info, BarChart2 } from 'lucide-react';
+import { Brain, Menu, X, Calculator, TrendingUp, HelpCircle, User, Info, BarChart2, TrendingDown } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -31,11 +31,15 @@ const Navigation: React.FC = () => {
               <BarChart2 className="w-4 h-4" />
               <span>Compare</span>
             </a>
+            <a href="#refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+              <TrendingDown className="w-4 h-4" />
+              <span>Refinancing</span>
+            </a>
             <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <HelpCircle className="w-4 h-4" />
               <span>Help</span>
             </a>
-            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all cursor-pointer">
+            <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit cursor-pointer">
               <User className="w-4 h-4" />
               <span>Sign In</span>
             </button>
@@ -69,6 +73,10 @@ const Navigation: React.FC = () => {
               <a href="#comparison" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <BarChart2 className="w-4 h-4" />
                 <span>Compare</span>
+              </a>
+              <a href="#refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+                <TrendingDown className="w-4 h-4" />
+                <span>Refinancing</span>
               </a>
               <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <HelpCircle className="w-4 h-4" />
