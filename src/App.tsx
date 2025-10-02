@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import LoanCalculator from './components/LoanCalculator';
 import About from './components/About';
 import AIInsights from './components/AIInsights';
+import LoanComparison from './components/LoanComparison';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         </section>
         <About />
         <AIInsights />
+        <LoanComparison />
         <section id="help" className="min-h-screen bg-white flex items-center justify-center">
           <div className="container mx-auto px-4 py-16 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Help Center</h2>
