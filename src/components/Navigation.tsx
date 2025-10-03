@@ -1,40 +1,39 @@
 import React from 'react';
-import { Brain, Menu, X, Calculator, TrendingUp, HelpCircle, User, Info, BarChart2, TrendingDown } from 'lucide-react';
+import { Menu, X, TrendingUp, HelpCircle, User, BarChart2, TrendingDown, DollarSign } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   return (
     <nav className="bg-white/80 backdrop-blur-md border-b border-white/20 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
             <img src="/Logo.svg" alt="AI Student Calculator" className="h-16 w-auto" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
-              <Calculator className="w-4 h-4" />
-              <span>Calculator</span>
-            </a>
-            <a href="#about" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
-              <Info className="w-4 h-4" />
-              <span>About</span>
-            </a>
-            <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+            <Link to="/insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <TrendingUp className="w-4 h-4" />
               <span>Insights</span>
-            </a>
-            <a href="#comparison" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+            </Link>
+            <Link to="/comparison" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <BarChart2 className="w-4 h-4" />
               <span>Compare</span>
-            </a>
-            <a href="#refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+            </Link>
+            <Link to="/calculators" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+              <DollarSign className="w-4 h-4" />
+              <span>Financial Calculators</span>
+            </Link>
+            <Link to="/refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <TrendingDown className="w-4 h-4" />
               <span>Refinancing</span>
-            </a>
+            </Link>
             <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <HelpCircle className="w-4 h-4" />
               <span>Help</span>
@@ -58,26 +57,22 @@ const Navigation: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
-              <a href="#calculator" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-                <Calculator className="w-4 h-4" />
-                <span>Calculator</span>
-              </a>
-              <a href="#about" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-                <Info className="w-4 h-4" />
-                <span>About</span>
-              </a>
-              <a href="#insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/insights" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <TrendingUp className="w-4 h-4" />
                 <span>Insights</span>
-              </a>
-              <a href="#comparison" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+              </Link>
+              <Link to="/comparison" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <BarChart2 className="w-4 h-4" />
                 <span>Compare</span>
-              </a>
-              <a href="#refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+              </Link>
+              <Link to="/calculators" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+                <DollarSign className="w-4 h-4" />
+                <span>Financial Calculators</span>
+              </Link>
+              <Link to="/refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <TrendingDown className="w-4 h-4" />
                 <span>Refinancing</span>
-              </a>
+              </Link>
               <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <HelpCircle className="w-4 h-4" />
                 <span>Help</span>

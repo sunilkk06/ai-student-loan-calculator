@@ -1,5 +1,6 @@
 import React from 'react';
-import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github, Shield, FileText, HelpCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Linkedin, Github, Shield, FileText, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -32,42 +33,42 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#calculator" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
-                  Loan Calculator
-                </a>
+                <Link to="/calculators/student-loan" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
+                  Student Loan Calculator
+                </Link>
               </li>
               <li>
-                <a href="#insights" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
+                <Link to="/calculators/scientific" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
+                  Scientific Calculator
+                </Link>
+              </li>
+              <li>
+                <Link to="/insights" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   AI Insights
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#comparison" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
+                <Link to="/comparison" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
                   Loan Comparison
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#refinancing" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
-                  Refinancing Guide
-                </a>
-              </li>
-              <li>
-                <a href="#resources" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
-                  Educational Resources
-                </a>
+                <Link to="/calculators" className="text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
+                  All Calculators
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#help" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
-                  <HelpCircle className="w-4 h-4" />
-                  <span>Help Center</span>
-                </a>
+                <Link to="/about" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
+                  <Info className="w-4 h-4" />
+                  <span>About Us</span>
+                </Link>
               </li>
               <li>
                 <a href="#contact" className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors text-sm cursor-pointer">
