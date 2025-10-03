@@ -25,6 +25,7 @@ const AIInsights: React.FC = () => {
   const [loanTerm, setLoanTerm] = useState(10);
   const [monthlyIncome, setMonthlyIncome] = useState(4000);
   const [showAnalysis, setShowAnalysis] = useState(false);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const calculateInsights = () => {
     const monthlyRate = interestRate / 100 / 12;
@@ -160,12 +161,28 @@ const AIInsights: React.FC = () => {
               </div>
 
               <button
-                onClick={() => setShowAnalysis(true)}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all flex items-center justify-center space-x-2 group"
+                onClick={() => {
+                  setIsAnalyzing(true);
+                  setTimeout(() => {
+                    setShowAnalysis(true);
+                    setIsAnalyzing(false);
+                  }, 800);
+                }}
+                disabled={isAnalyzing}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-xl font-semibold text-lg hover:shadow-2xl transition-all flex items-center justify-center space-x-2 group disabled:opacity-50"
               >
-                <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                <span>Generate AI Analysis</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                {isAnalyzing ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                    <span>Analyzing...</span>
+                  </>
+                ) : (
+                  <>
+                    <Zap className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                    <span>Generate AI Analysis</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </button>
             </div>
           </div>
