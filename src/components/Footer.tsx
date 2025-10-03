@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <a href="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
-              <img src="/Logo.svg" alt="AI Student Loan Calculator" className="h-12 w-auto" />
+              <img src="/Logo.svg" alt="AI Student Calculator" className="h-12 w-auto" />
             </a>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering students with AI-driven insights to make informed decisions about their educational loans and financial future.
@@ -129,7 +129,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 AI Student Loan Calculator. All rights reserved. Built with AI-powered insights.
+              © 2025 AI Student Calculator. All rights reserved. Built with AI-powered insights.
             </p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <span className="text-xs text-gray-500">Secured by SSL</span>

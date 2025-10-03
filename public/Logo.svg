@@ -1,69 +1,98 @@
-<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Brain Icon (left side) -->
-  <g transform="translate(10, 20)">
-    <!-- Brain outline -->
-    <path d="M12 4C10.5 4 9 4.5 8 5.5C7 6.5 6.5 8 6.5 9.5C6.5 10 6.6 10.5 6.7 11C5.7 11.3 5 12.2 5 13.3C5 14 5.3 14.6 5.8 15C5.3 15.5 5 16.2 5 17C5 18.7 6.3 20 8 20C8.5 20 9 19.9 9.4 19.6C9.9 20.5 10.9 21 12 21C13.1 21 14.1 20.5 14.6 19.6C15 19.9 15.5 20 16 20C17.7 20 19 18.7 19 17C19 16.2 18.7 15.5 18.2 15C18.7 14.6 19 14 19 13.3C19 12.2 18.3 11.3 17.3 11C17.4 10.5 17.5 10 17.5 9.5C17.5 8 17 6.5 16 5.5C15 4.5 13.5 4 12 4Z"
-          stroke="url(#brainGradient)" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-    <!-- Brain details -->
-    <circle cx="10" cy="10" r="1" fill="url(#brainGradient)"/>
-    <circle cx="14" cy="10" r="1" fill="url(#brainGradient)"/>
-    <circle cx="10" cy="14" r="1" fill="url(#brainGradient)"/>
-    <circle cx="14" cy="14" r="1" fill="url(#brainGradient)"/>
-  </g>
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Modern Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
 
-  <!-- Calculator Window -->
-  <g transform="translate(30, 20)">
-    <!-- Window background -->
-    <rect x="0" y="0" width="50" height="60" rx="6" fill="white" stroke="url(#windowGradient)" stroke-width="2.5"/>
+  <!-- Icon Container -->
+  <g transform="translate(5, 5)">
+    <!-- Outer Glow Circle -->
+    <circle cx="25" cy="25" r="27" fill="url(#primaryGrad)" opacity="0.08"/>
 
-    <!-- Window header -->
-    <rect x="0" y="0" width="50" height="12" rx="6" fill="url(#windowGradient)"/>
-    <rect x="0" y="6" width="50" height="6" fill="url(#windowGradient)"/>
+    <!-- Main Background -->
+    <circle cx="25" cy="25" r="24" fill="url(#primaryGrad)" filter="url(#shadow)"/>
 
-    <!-- Header dot -->
-    <circle cx="42" cy="6" r="2" fill="white"/>
+    <!-- Inner Circle -->
+    <circle cx="25" cy="25" r="21" fill="white" opacity="0.95"/>
 
-    <!-- Chart line inside window -->
-    <g transform="translate(8, 25)">
-      <polyline points="0,20 8,18 16,12 24,15 32,8"
-                stroke="url(#chartGradient)" stroke-width="2.5" fill="none"
-                stroke-linecap="round" stroke-linejoin="round"/>
-      <!-- Data points -->
-      <circle cx="0" cy="20" r="2.5" fill="url(#chartGradient)"/>
-      <circle cx="8" cy="18" r="2.5" fill="url(#chartGradient)"/>
-      <circle cx="16" cy="12" r="2.5" fill="url(#chartGradient)"/>
-      <circle cx="24" cy="15" r="2.5" fill="url(#chartGradient)"/>
-      <circle cx="32" cy="8" r="2.5" fill="url(#chartGradient)"/>
+    <!-- Neural Network Design -->
+    <g filter="url(#glow)">
+      <!-- Top Layer Nodes -->
+      <circle cx="17" cy="16" r="2.5" fill="url(#accentGrad)"/>
+      <circle cx="25" cy="13" r="3" fill="url(#primaryGrad)"/>
+      <circle cx="33" cy="16" r="2.5" fill="url(#accentGrad)"/>
+
+      <!-- Connection Lines (Top to Middle) -->
+      <line x1="17" y1="18" x2="20" y2="23" stroke="url(#primaryGrad)" stroke-width="1.2" opacity="0.5"/>
+      <line x1="25" y1="16" x2="25" y2="23" stroke="url(#primaryGrad)" stroke-width="1.5" opacity="0.7"/>
+      <line x1="33" y1="18" x2="30" y2="23" stroke="url(#primaryGrad)" stroke-width="1.2" opacity="0.5"/>
+
+      <!-- Middle Layer - Calculator Display -->
+      <rect x="18" y="23" width="14" height="6" rx="2" fill="url(#primaryGrad)" opacity="0.15"/>
+      <rect x="19" y="24" width="12" height="4" rx="1.5" fill="url(#accentGrad)" opacity="0.2"/>
+
+      <!-- Middle Node -->
+      <circle cx="25" cy="26" r="3.5" fill="url(#primaryGrad)"/>
+      <circle cx="25" cy="26" r="2" fill="white" opacity="0.9"/>
+
+      <!-- Connection Lines (Middle to Bottom) -->
+      <line x1="20" y1="29" x2="17" y2="34" stroke="url(#primaryGrad)" stroke-width="1.2" opacity="0.5"/>
+      <line x1="25" y1="29.5" x2="25" y2="35" stroke="url(#primaryGrad)" stroke-width="1.5" opacity="0.7"/>
+      <line x1="30" y1="29" x2="33" y2="34" stroke="url(#primaryGrad)" stroke-width="1.2" opacity="0.5"/>
+
+      <!-- Bottom Layer Nodes -->
+      <circle cx="17" cy="37" r="2.5" fill="url(#accentGrad)"/>
+      <circle cx="25" cy="40" r="3" fill="url(#primaryGrad)"/>
+      <circle cx="33" cy="37" r="2.5" fill="url(#accentGrad)"/>
+
+      <!-- Sparkle Accents -->
+      <circle cx="14" cy="20" r="1" fill="#fbbf24" opacity="0.8"/>
+      <circle cx="36" cy="20" r="1" fill="#fbbf24" opacity="0.8"/>
+      <circle cx="14" cy="33" r="1" fill="#fbbf24" opacity="0.8"/>
+      <circle cx="36" cy="33" r="1" fill="#fbbf24" opacity="0.8"/>
     </g>
   </g>
 
-  <!-- AI Text -->
-  <text x="100" y="55" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#003366">AI</text>
+  <!-- Text Content -->
+  <g transform="translate(60, 0)">
+    <!-- AI Student Text -->
+    <text x="0" y="28" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="800" letter-spacing="-0.5" fill="url(#textGrad)">
+      AI Student
+    </text>
 
-  <!-- Student Loan Calculator Text -->
-  <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#003366">Student</text>
-  <text x="168" y="75" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="url(#textGradient)">Loan Calculator</text>
+    <!-- Calculator Text with Accent -->
+    <text x="0" y="47" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700" letter-spacing="0.5" fill="url(#primaryGrad)">
+      Calculator
+    </text>
 
-  <!-- Gradients -->
-  <defs>
-    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-    </linearGradient>
+    <!-- Decorative Underline -->
+    <rect x="0" y="50" width="70" height="2" rx="1" fill="url(#accentGrad)" opacity="0.3"/>
 
-    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-    </linearGradient>
-
-    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
-    </linearGradient>
-
-    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#14B8A6;stop-opacity:1" />
-    </linearGradient>
-  </defs>
+    <!-- Accent Dot -->
+    <circle cx="74" cy="45" r="2.5" fill="#fbbf24"/>
+  </g>
 </svg>

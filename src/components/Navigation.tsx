@@ -10,7 +10,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center cursor-pointer hover:opacity-80 transition-opacity">
-            <img src="/Logo.svg" alt="AI Student Loan Calculator" className="h-16 w-auto" />
+            <img src="/Logo.svg" alt="AI Student Calculator" className="h-16 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
