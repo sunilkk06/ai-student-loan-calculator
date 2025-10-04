@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, X, TrendingUp, HelpCircle, User, BarChart2, TrendingDown, DollarSign } from 'lucide-react';
+import { Menu, X, TrendingUp, HelpCircle, User, BarChart2, TrendingDown, DollarSign, Book, Wallet } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation: React.FC = () => {
@@ -30,14 +30,22 @@ const Navigation: React.FC = () => {
               <DollarSign className="w-4 h-4" />
               <span>Financial Calculators</span>
             </Link>
+            <Link to="/academic" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+              <Book className="w-4 h-4" />
+              <span>Academic Calculators</span>
+            </Link>
+            <Link to="/student-finance" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+              <Wallet className="w-4 h-4" />
+              <span>Student Finance & Planning</span>
+            </Link>
             <Link to="/refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <TrendingDown className="w-4 h-4" />
               <span>Refinancing</span>
             </Link>
-            <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+            <Link to="/help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <HelpCircle className="w-4 h-4" />
               <span>Help</span>
-            </a>
+            </Link>
             <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit cursor-pointer">
               <User className="w-4 h-4" />
               <span>Sign In</span>
@@ -69,14 +77,22 @@ const Navigation: React.FC = () => {
                 <DollarSign className="w-4 h-4" />
                 <span>Financial Calculators</span>
               </Link>
+              <Link to="/academic" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+                <Book className="w-4 h-4" />
+                <span>Academic Calculators</span>
+              </Link>
+              <Link to="/student-finance" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+                <Wallet className="w-4 h-4" />
+                <span>Student Finance & Planning</span>
+              </Link>
               <Link to="/refinancing" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <TrendingDown className="w-4 h-4" />
                 <span>Refinancing</span>
               </Link>
-              <a href="#help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/help" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <HelpCircle className="w-4 h-4" />
                 <span>Help</span>
-              </a>
+              </Link>
               <button className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all w-fit cursor-pointer">
                 <User className="w-4 h-4" />
                 <span>Sign In</span>

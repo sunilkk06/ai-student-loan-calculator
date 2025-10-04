@@ -10,6 +10,14 @@ import AIInsightsPage from './pages/AIInsightsPage';
 import LoanComparisonPage from './pages/LoanComparisonPage';
 import RefinancingPage from './pages/RefinancingPage';
 import AboutPage from './pages/AboutPage';
+import AcademicCalculatorsPage from './pages/AcademicCalculatorsPage';
+import StatisticsCalculatorPage from './pages/StatisticsCalculatorPage';
+import GraphingCalculatorPage from './pages/GraphingCalculatorPage';
+import StudentFinancePage from './pages/StudentFinancePage';
+import IDREstimatorPage from './pages/IDREstimatorPage';
+import RoommateExpenseSplitterPage from './pages/RoommateExpenseSplitterPage';
+import TVMCalculatorPage from './pages/TVMCalculatorPage';
+import HelpPage from './pages/HelpPage';
 
 function App() {
   return (
@@ -23,9 +31,17 @@ function App() {
             <Route path="/calculators" element={<CalculatorsPage />} />
             <Route path="/calculators/scientific" element={<ScientificCalculatorPage />} />
             <Route path="/calculators/student-loan" element={<StudentLoanCalculatorPage />} />
+            <Route path="/calculators/tvm" element={<TVMCalculatorPage />} />
             <Route path="/insights" element={<AIInsightsPage />} />
             <Route path="/comparison" element={<LoanComparisonPage />} />
             <Route path="/refinancing" element={<RefinancingPage />} />
+            <Route path="/academic" element={<AcademicCalculatorsPage />} />
+            <Route path="/academic/statistics" element={<StatisticsCalculatorPage />} />
+            <Route path="/academic/graphing" element={<GraphingCalculatorPage />} />
+            <Route path="/student-finance" element={<StudentFinancePage />} />
+            <Route path="/student-finance/idr-estimator" element={<IDREstimatorPage />} />
+            <Route path="/student-finance/roommate-expense-splitter" element={<RoommateExpenseSplitterPage />} />
+            <Route path="/help" element={<HelpPage />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>
         </main>
