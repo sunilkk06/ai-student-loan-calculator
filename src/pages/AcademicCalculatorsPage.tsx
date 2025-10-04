@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, GraduationCap, Brain } from 'lucide-react';
+import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AcademicCalculatorsPage: React.FC = () => {
@@ -11,6 +11,22 @@ const AcademicCalculatorsPage: React.FC = () => {
       link: '/calculators/scientific',
       color: 'from-blue-500 to-purple-500',
       courses: ['Calculus', 'Physics', 'Chemistry', 'Engineering']
+    },
+    {
+      title: 'Statistics Calculator',
+      description: 'Calculate mean, median, mode, standard deviation, variance, and other descriptive statistics for your data sets. Perfect for statistics courses and research projects.',
+      icon: BarChart,
+      link: '/academic/statistics',
+      color: 'from-purple-500 to-pink-500',
+      courses: ['Statistics', 'Data Science', 'Research Methods', 'Psychology', 'Economics']
+    },
+    {
+      title: 'Graphing Calculator',
+      description: 'Necessary for higher-level Calculus, Engineering, and Economics. Graph functions, find roots and intersections, and view tables of values.',
+      icon: FunctionSquare,
+      link: '/academic/graphing',
+      color: 'from-blue-500 to-teal-500',
+      courses: ['Calculus', 'Engineering', 'Economics', 'Advanced Mathematics']
     }
   ];
 
