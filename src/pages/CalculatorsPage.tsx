@@ -5,14 +5,6 @@ import { Link } from 'react-router-dom';
 const CalculatorsPage: React.FC = () => {
   const calculators = [
     {
-      title: 'Scientific Calculator',
-      description: 'Essential for all college-level math and science courses. Includes trigonometric functions, logarithms, powers/roots, and scientific notation.',
-      icon: Calculator,
-      link: '/calculators/scientific',
-      color: 'from-blue-500 to-purple-500',
-      courses: ['Calculus', 'Physics', 'Chemistry', 'Engineering']
-    },
-    {
       title: 'Student Loan Calculator',
       description: 'Calculate monthly payments, total interest, and create a repayment plan for your student loans.',
       icon: DollarSign,
@@ -28,11 +20,11 @@ const CalculatorsPage: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Financial & Academic Calculators
+            Financial Calculators
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Free online calculators designed specifically for college students. From scientific calculations 
-            to financial planning tools.
+            Free online calculators designed specifically for college students to manage their finances. 
+            Calculate loans, create repayment plans, and make informed financial decisions.
           </p>
         </div>
 
