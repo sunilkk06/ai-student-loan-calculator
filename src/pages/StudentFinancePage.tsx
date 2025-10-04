@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, PiggyBank, TrendingUp, FileText } from 'lucide-react';
+import { Calculator, PiggyBank, TrendingUp, FileText, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const StudentFinancePage: React.FC = () => {
@@ -11,6 +11,14 @@ const StudentFinancePage: React.FC = () => {
       link: '/student-finance/idr-estimator',
       color: 'from-green-500 to-teal-500',
       courses: ['Loan Repayment', 'Financial Planning', 'Budgeting']
+    },
+    {
+      title: 'Roommate Expense Splitter',
+      description: 'Highly practical for students living off-campus and sharing bills. Allows users to input shared expenses (rent, utilities, groceries) and calculates the fair split per person, handling cases where shares are unequal.',
+      icon: Users,
+      link: '/student-finance/roommate-expense-splitter',
+      color: 'from-blue-500 to-purple-500',
+      courses: ['Budgeting', 'Shared Living', 'Expense Management']
     }
   ];
 
