@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import CalculatorsPage from './pages/CalculatorsPage';
 import ScientificCalculatorPage from './pages/ScientificCalculatorPage';
 import StudentLoanCalculatorPage from './pages/StudentLoanCalculatorPage';
+import BudgetPlannerPage from './pages/BudgetPlannerPage';
 import AIInsightsPage from './pages/AIInsightsPage';
 import LoanComparisonPage from './pages/LoanComparisonPage';
 import RefinancingPage from './pages/RefinancingPage';
@@ -32,6 +33,7 @@ function App() {
             <Route path="/calculators" element={<CalculatorsPage />} />
             <Route path="/calculators/scientific" element={<ScientificCalculatorPage />} />
             <Route path="/calculators/student-loan" element={<StudentLoanCalculatorPage />} />
+            <Route path="/calculators/budget-planner" element={<BudgetPlannerPage />} />
             <Route path="/calculators/tvm" element={<TVMCalculatorPage />} />
             <Route path="/insights" element={<AIInsightsPage />} />
             <Route path="/comparison" element={<LoanComparisonPage />} />

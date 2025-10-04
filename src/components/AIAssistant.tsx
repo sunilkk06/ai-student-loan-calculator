@@ -130,13 +130,14 @@ const AIAssistant: React.FC = () => {
     },
 
     // Budgeting
-    'budget|budgeting|save money|expenses|spending': {
-      response: "Smart budgeting is key to managing student finances! Track your income and expenses, prioritize needs over wants, and use our calculators to plan for loan payments and shared costs.",
+    'budget|budgeting|save money|expenses|spending|income|planner': {
+      response: "Smart budgeting is key to managing student finances! Our Student Budget Planner helps you track income vs expenses and see your net monthly total. Perfect for managing day-to-day money!",
       suggestions: [
+        "Open budget planner",
         "Help me split expenses",
-        "Calculate my loan payment",
         "Tips for saving money"
-      ]
+      ],
+      action: { type: 'navigate', path: '/calculators/budget-planner' }
     },
 
     // Financial Advice

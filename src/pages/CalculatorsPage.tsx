@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, TrendingUp, DollarSign, PieChart } from 'lucide-react';
+import { Calculator, TrendingUp, DollarSign, PieChart, Wallet } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CalculatorsPage: React.FC = () => {
@@ -11,6 +11,14 @@ const CalculatorsPage: React.FC = () => {
       link: '/calculators/student-loan',
       color: 'from-green-500 to-teal-500',
       courses: ['Financial Planning', 'Personal Finance']
+    },
+    {
+      title: 'Student Budget Planner',
+      description: 'Helps manage money day-to-day, a critical need for students juggling bills. Simple input for Income (job, aid) vs. Expenses (rent, tuition, books, food, transport) with a net monthly total.',
+      icon: Wallet,
+      link: '/calculators/budget-planner',
+      color: 'from-blue-500 to-purple-500',
+      courses: ['Budgeting', 'Financial Planning', 'Money Management']
     }
   ];
 
