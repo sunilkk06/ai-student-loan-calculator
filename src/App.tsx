@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import AIAssistant from './components/AIAssistant';
 import HomePage from './pages/HomePage';
 import CalculatorsPage from './pages/CalculatorsPage';
 import ScientificCalculatorPage from './pages/ScientificCalculatorPage';
@@ -46,6 +47,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <AIAssistant />
       </div>
     </Router>
   );
