@@ -162,6 +162,17 @@ const AIAssistant: React.FC = () => {
       action: { type: 'navigate', path: '/calculators/budget-planner' }
     },
 
+    // College Savings
+    'college savings|529|save for college|education savings|savings plan': {
+      response: "Our College Savings Plan Calculator helps families plan ahead! Calculate monthly/annual savings needed to reach your college cost goal and see the power of compound interest over time.",
+      suggestions: [
+        "Open college savings calculator",
+        "How much does college cost?",
+        "What is a 529 plan?"
+      ],
+      action: { type: 'navigate', path: '/student-finance/college-savings' }
+    },
+
     // Financial Advice
     'should i|advice|recommend|help me decide': {
       response: "I can provide guidance on financial decisions! Tell me more about your situation:\n\n• Are you comparing loan options?\n• Considering refinancing?\n• Planning your repayment strategy?\n• Budgeting for college expenses?",

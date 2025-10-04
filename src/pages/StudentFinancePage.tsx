@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, PiggyBank, TrendingUp, FileText, Users } from 'lucide-react';
+import { Calculator, PiggyBank, TrendingUp, FileText, Users, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const StudentFinancePage: React.FC = () => {
@@ -19,6 +19,14 @@ const StudentFinancePage: React.FC = () => {
       link: '/student-finance/roommate-expense-splitter',
       color: 'from-blue-500 to-purple-500',
       courses: ['Budgeting', 'Shared Living', 'Expense Management']
+    },
+    {
+      title: 'College Savings Plan',
+      description: 'Calculates how much a family needs to save per month or year to reach a specific college cost goal. Helps establish realistic savings targets and shows the impact of compound interest over time.',
+      icon: GraduationCap,
+      link: '/student-finance/college-savings',
+      color: 'from-purple-500 to-pink-500',
+      courses: ['Savings', 'Financial Planning', 'Investment', 'Family Finance']
     }
   ];
 
