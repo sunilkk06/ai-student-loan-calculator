@@ -16,6 +16,7 @@ import AcademicCalculatorsPage from './pages/AcademicCalculatorsPage';
 import StatisticsCalculatorPage from './pages/StatisticsCalculatorPage';
 import GraphingCalculatorPage from './pages/GraphingCalculatorPage';
 import PhysicsSolverPage from './pages/PhysicsSolverPage';
+import CitationFormatterPage from './pages/CitationFormatterPage';
 import StudentFinancePage from './pages/StudentFinancePage';
 import IDREstimatorPage from './pages/IDREstimatorPage';
 import RoommateExpenseSplitterPage from './pages/RoommateExpenseSplitterPage';
@@ -43,6 +44,7 @@ function App() {
             <Route path="/academic/statistics" element={<StatisticsCalculatorPage />} />
             <Route path="/academic/graphing" element={<GraphingCalculatorPage />} />
             <Route path="/academic/physics-solver" element={<PhysicsSolverPage />} />
+            <Route path="/academic/citation-formatter" element={<CitationFormatterPage />} />
             <Route path="/student-finance" element={<StudentFinancePage />} />
             <Route path="/student-finance/idr-estimator" element={<IDREstimatorPage />} />
             <Route path="/student-finance/roommate-expense-splitter" element={<RoommateExpenseSplitterPage />} />

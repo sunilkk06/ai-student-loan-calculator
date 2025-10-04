@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare, Zap } from 'lucide-react';
+import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare, Zap, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AcademicCalculatorsPage: React.FC = () => {
@@ -35,6 +35,14 @@ const AcademicCalculatorsPage: React.FC = () => {
       link: '/academic/physics-solver',
       color: 'from-orange-500 to-red-500',
       courses: ['Physics', 'Engineering', 'Chemistry', 'Mechanics', 'Electronics']
+    },
+    {
+      title: 'Citation/Bibliography Formatter',
+      description: 'For all students writing papers. Format book, article, and web citations into common styles (MLA, APA, Chicago). Essential for research papers and essays.',
+      icon: BookOpen,
+      link: '/academic/citation-formatter',
+      color: 'from-indigo-500 to-purple-500',
+      courses: ['English', 'Research', 'Writing', 'All Subjects']
     }
   ];
 

@@ -118,6 +118,17 @@ const AIAssistant: React.FC = () => {
       action: { type: 'navigate', path: '/academic/physics-solver' }
     },
 
+    // Citation/Bibliography
+    'citation|bibliography|cite|reference|mla|apa|chicago|works cited|format': {
+      response: "Our Citation Formatter helps you create properly formatted citations in MLA, APA, or Chicago style! Perfect for research papers and essays. Format books, articles, and websites easily.",
+      suggestions: [
+        "Open citation formatter",
+        "How do I cite a book?",
+        "MLA vs APA format"
+      ],
+      action: { type: 'navigate', path: '/academic/citation-formatter' }
+    },
+
     // Refinancing
     'refinance|refinancing|lower interest|consolidate': {
       response: "Refinancing can lower your interest rate and monthly payment, but you'll lose federal benefits like IDR and forgiveness. It's best for high-income borrowers with good credit and private loans.",
