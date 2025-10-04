@@ -358,6 +358,233 @@ const StatisticsCalculatorPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* How to Use Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use the Statistics Calculator</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 1: Enter Your Data</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Type a single number and click "Add" (e.g., 85)</li>
+                <li>Or enter multiple numbers separated by commas (e.g., 85, 90, 78, 92)</li>
+                <li>Or enter numbers separated by spaces (e.g., 85 90 78 92)</li>
+                <li>Press Enter to quickly add data</li>
+              </ol>
+            </div>
+
+            <div className="bg-pink-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 2: Manage Your Data</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>View all entered data points in the grid</li>
+                <li>Hover over any data point to see the delete button</li>
+                <li>Click the trash icon to remove individual points</li>
+                <li>Use "Clear All" to start over</li>
+              </ol>
+            </div>
+
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 3: Calculate</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Click "Calculate Statistics" button</li>
+                <li>View results in the right panel</li>
+                <li>See Central Tendency (mean, median, mode)</li>
+                <li>Review Dispersion measures (std dev, variance, IQR)</li>
+              </ol>
+            </div>
+
+            <div className="bg-teal-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Pro Tips</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li>Add at least 3 data points for meaningful results</li>
+                <li>Use decimal numbers for precise calculations</li>
+                <li>Check for outliers that might skew results</li>
+                <li>Compare mean vs median to detect skewness</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* What is Statistics Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Descriptive Statistics?</h2>
+
+          <div className="prose max-w-none text-gray-700">
+            <p className="text-lg mb-6">
+              Descriptive statistics are numerical and graphical methods used to summarize and describe the main 
+              features of a dataset. They provide simple summaries about the sample and measures, forming the 
+              basis of virtually every quantitative analysis of data.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Key Statistical Measures</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Measures of Central Tendency</h4>
+                <div className="space-y-3">
+                  <div>
+                    <strong className="text-purple-900">Mean (Average):</strong>
+                    <p className="text-gray-700 mt-1">
+                      The sum of all values divided by the number of values. Best for normally distributed data 
+                      without outliers. Example: Test scores 85, 90, 88 → Mean = 87.67
+                    </p>
+                  </div>
+                  <div>
+                    <strong className="text-purple-900">Median:</strong>
+                    <p className="text-gray-700 mt-1">
+                      The middle value when data is ordered. Less affected by outliers than mean. 
+                      Example: Salaries 40k, 45k, 50k, 200k → Median = 47.5k (more representative than mean of 83.75k)
+                    </p>
+                  </div>
+                  <div>
+                    <strong className="text-purple-900">Mode:</strong>
+                    <p className="text-gray-700 mt-1">
+                      The most frequently occurring value(s). Useful for categorical data. 
+                      Example: Shoe sizes 7, 8, 8, 9, 8, 10 → Mode = 8
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Measures of Dispersion</h4>
+                <div className="space-y-3">
+                  <div>
+                    <strong className="text-blue-900">Standard Deviation:</strong>
+                    <p className="text-gray-700 mt-1">
+                      Measures how spread out numbers are from the mean. Low SD = data clustered near mean. 
+                      High SD = data widely spread. Essential for understanding data variability.
+                    </p>
+                  </div>
+                  <div>
+                    <strong className="text-blue-900">Variance:</strong>
+                    <p className="text-gray-700 mt-1">
+                      The average of squared deviations from the mean. Variance = (Standard Deviation)². 
+                      Used in advanced statistical tests and probability theory.
+                    </p>
+                  </div>
+                  <div>
+                    <strong className="text-blue-900">Range:</strong>
+                    <p className="text-gray-700 mt-1">
+                      The difference between maximum and minimum values. Simple measure of spread. 
+                      Example: Test scores 65-95 → Range = 30 points
+                    </p>
+                  </div>
+                  <div>
+                    <strong className="text-blue-900">IQR (Interquartile Range):</strong>
+                    <p className="text-gray-700 mt-1">
+                      The range of the middle 50% of data (Q3 - Q1). Robust measure of spread that 
+                      ignores outliers. Used to identify outliers in box plots.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Use Cases for Students</h3>
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-3 text-xl">📊</span>
+                  <div>
+                    <strong className="text-gray-900">Statistics Courses:</strong> Calculate descriptive statistics for homework, 
+                    understand data distributions, and prepare for exams
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-3 text-xl">🔬</span>
+                  <div>
+                    <strong className="text-gray-900">Research Projects:</strong> Analyze survey results, experimental data, 
+                    and observational studies for psychology, sociology, and science courses
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-3 text-xl">📈</span>
+                  <div>
+                    <strong className="text-gray-900">Business Analytics:</strong> Analyze sales data, customer metrics, 
+                    and financial performance for business and economics classes
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-3 text-xl">🎓</span>
+                  <div>
+                    <strong className="text-gray-900">Grade Analysis:</strong> Track your academic performance, 
+                    calculate GPA statistics, and identify areas for improvement
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-3 text-xl">🏥</span>
+                  <div>
+                    <strong className="text-gray-900">Health Sciences:</strong> Analyze patient data, clinical trial results, 
+                    and epidemiological studies for nursing and medical courses
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">When should I use mean vs median?</h3>
+              <p className="text-gray-700">
+                Use <strong>mean</strong> when your data is normally distributed without outliers (e.g., test scores, heights). 
+                Use <strong>median</strong> when you have outliers or skewed data (e.g., income, house prices). The median is 
+                more robust and represents the "typical" value better when extreme values are present.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What does standard deviation tell me?</h3>
+              <p className="text-gray-700">
+                Standard deviation measures how spread out your data is. A <strong>low standard deviation</strong> (e.g., 2-3) 
+                means data points are close to the mean - consistent results. A <strong>high standard deviation</strong> (e.g., 15-20) 
+                means data is widely spread - high variability. In a normal distribution, about 68% of data falls within 1 SD of the mean.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How many data points do I need?</h3>
+              <p className="text-gray-700">
+                For basic descriptive statistics, you need at least <strong>3 data points</strong>, but more is better. 
+                For reliable results: 30+ points for small studies, 100+ for surveys, 1000+ for population estimates. 
+                The more data you have, the more accurate your statistical measures will be.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What is the interquartile range (IQR) used for?</h3>
+              <p className="text-gray-700">
+                IQR is the range of the middle 50% of your data (Q3 - Q1). It's used to: (1) Measure spread without being 
+                affected by outliers, (2) Identify outliers (values below Q1 - 1.5×IQR or above Q3 + 1.5×IQR), and 
+                (3) Create box plots for visual data analysis. It's more robust than range for skewed distributions.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Can I use this for my statistics homework?</h3>
+              <p className="text-gray-700">
+                Absolutely! This calculator is perfect for verifying your manual calculations, checking homework answers, 
+                and understanding statistical concepts. However, always show your work on assignments and use this tool 
+                to learn and verify, not just to get answers. Understanding the concepts is more important than the numbers.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What if my data has no mode?</h3>
+              <p className="text-gray-700">
+                If all values appear only once, there is no mode (the calculator will show "None"). This is common with 
+                continuous data or unique measurements. Some datasets can have multiple modes (bimodal or multimodal), 
+                which indicates multiple peaks in the distribution - this calculator will show all modes if they exist.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

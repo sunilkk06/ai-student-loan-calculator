@@ -448,6 +448,257 @@ const GraphingCalculatorPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* How to Use Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use the Graphing Calculator</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 1: Enter Your Function</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Type your function in the f(x) input box</li>
+                <li>Use 'x' as your variable (e.g., x^2, sin(x), 2*x+1)</li>
+                <li>Click example functions for quick testing</li>
+                <li>Press Enter or click "Plot Function" to graph</li>
+              </ol>
+            </div>
+
+            <div className="bg-teal-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 2: Adjust the View</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Set X Min/Max and Y Min/Max for viewing window</li>
+                <li>Use "Zoom In" to see details closer</li>
+                <li>Use "Zoom Out" to see broader view</li>
+                <li>Click "Reset" to return to default view (-10 to 10)</li>
+              </ol>
+            </div>
+
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 3: Analyze</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Toggle "Grid" to show/hide coordinate grid</li>
+                <li>Click "Show Table" to view x and f(x) values</li>
+                <li>Look for roots (where graph crosses x-axis)</li>
+                <li>Identify max/min points and asymptotes</li>
+              </ol>
+            </div>
+
+            <div className="bg-pink-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Pro Tips</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li>Use parentheses for complex expressions: sin(2*x)</li>
+                <li>Adjust viewing window to see important features</li>
+                <li>Check table values to find exact coordinates</li>
+                <li>Use pi for π and e for Euler's number</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* What is a Graphing Calculator Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">What is a Graphing Calculator?</h2>
+
+          <div className="prose max-w-none text-gray-700">
+            <p className="text-lg mb-6">
+              A graphing calculator is an advanced calculator capable of plotting graphs, solving simultaneous equations, 
+              and performing other tasks with variables. It's an essential tool for students in advanced mathematics, 
+              science, and engineering courses, helping visualize mathematical relationships and analyze functions.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Supported Functions & Operations</h3>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Basic Operations</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>+</strong> Addition (e.g., x+5)</li>
+                  <li><strong>-</strong> Subtraction (e.g., x-3)</li>
+                  <li><strong>*</strong> Multiplication (e.g., 2*x)</li>
+                  <li><strong>/</strong> Division (e.g., x/2)</li>
+                  <li><strong>^</strong> Exponentiation (e.g., x^2, x^3)</li>
+                </ul>
+              </div>
+
+              <div className="bg-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Trigonometric</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>sin(x)</strong> Sine function</li>
+                  <li><strong>cos(x)</strong> Cosine function</li>
+                  <li><strong>tan(x)</strong> Tangent function</li>
+                  <li>All functions use radians</li>
+                  <li>Example: sin(x), cos(2*x)</li>
+                </ul>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Advanced Functions</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>sqrt(x)</strong> Square root</li>
+                  <li><strong>abs(x)</strong> Absolute value</li>
+                  <li><strong>ln(x)</strong> Natural logarithm</li>
+                  <li><strong>log(x)</strong> Base-10 logarithm</li>
+                  <li><strong>e</strong> Euler's number (2.718...)</li>
+                  <li><strong>pi</strong> Pi constant (3.14159...)</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Function Types</h3>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-gradient-to-r from-blue-50 to-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Polynomial Functions</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Linear:</strong> y = mx + b (e.g., 2*x+1)</li>
+                  <li><strong>Quadratic:</strong> y = ax² + bx + c (e.g., x^2-4*x+3)</li>
+                  <li><strong>Cubic:</strong> y = ax³ + ... (e.g., x^3-2*x)</li>
+                  <li>Used in physics for motion, economics for cost functions</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Trigonometric Functions</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Sine/Cosine:</strong> sin(x), cos(x)</li>
+                  <li><strong>Tangent:</strong> tan(x)</li>
+                  <li><strong>Transformed:</strong> 2*sin(x), cos(x+1)</li>
+                  <li>Used in physics for waves, engineering for signals</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Exponential & Logarithmic</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Exponential:</strong> e^x, 2^x</li>
+                  <li><strong>Logarithmic:</strong> ln(x), log(x)</li>
+                  <li>Used in biology for growth, chemistry for pH</li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Rational Functions</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Hyperbola:</strong> 1/x</li>
+                  <li><strong>Complex:</strong> (x^2+1)/(x-2)</li>
+                  <li>Shows asymptotes and discontinuities</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Common Use Cases for Students</h3>
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 text-xl">📐</span>
+                  <div>
+                    <strong className="text-gray-900">Calculus:</strong> Visualize derivatives and integrals, find critical points, 
+                    analyze function behavior, and understand limits graphically
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 text-xl">🔬</span>
+                  <div>
+                    <strong className="text-gray-900">Physics:</strong> Plot motion graphs (position, velocity, acceleration), 
+                    analyze wave functions, and model physical phenomena
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 text-xl">⚙️</span>
+                  <div>
+                    <strong className="text-gray-900">Engineering:</strong> Design curves, analyze system responses, 
+                    model electrical circuits, and solve differential equations
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 text-xl">💰</span>
+                  <div>
+                    <strong className="text-gray-900">Economics:</strong> Graph supply and demand curves, analyze cost and revenue functions, 
+                    and model economic growth
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 text-xl">📊</span>
+                  <div>
+                    <strong className="text-gray-900">Statistics:</strong> Plot probability distributions, visualize regression lines, 
+                    and analyze data trends
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How do I graph a parabola?</h3>
+              <p className="text-gray-700">
+                Enter a quadratic function like <strong>x^2</strong> for a basic parabola, or <strong>x^2-4*x+3</strong> for a more 
+                complex one. The graph will show the characteristic U-shape. Adjust the viewing window to see the vertex (lowest/highest point) 
+                and x-intercepts (roots). Use the table to find exact coordinates of key points.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Why isn't my function graphing correctly?</h3>
+              <p className="text-gray-700">
+                Common issues: (1) Use <strong>*</strong> for multiplication (write 2*x, not 2x), (2) Use <strong>^</strong> for exponents 
+                (write x^2, not x²), (3) Check parentheses for complex expressions, (4) Adjust viewing window - your graph might be outside 
+                the current view, (5) Some functions like 1/x have asymptotes that may look disconnected.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How do I find where a function crosses the x-axis?</h3>
+              <p className="text-gray-700">
+                X-intercepts (roots) are where the graph crosses the x-axis (where y=0). Visually locate where the graph crosses, 
+                then use the <strong>table of values</strong> to find approximate x-values. Look for where f(x) changes from positive to 
+                negative or vice versa. For precise values, you may need to zoom in or use algebraic methods.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What viewing window should I use?</h3>
+              <p className="text-gray-700">
+                The default window (-10 to 10 for both x and y) works for most basic functions. For <strong>trigonometric functions</strong>, 
+                try x: -2π to 2π (about -6.28 to 6.28). For <strong>exponential functions</strong>, try x: -5 to 5, y: -2 to 10. 
+                For <strong>rational functions</strong> like 1/x, ensure you can see both branches and asymptotes. Experiment with zoom to find the best view.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Can I graph multiple functions at once?</h3>
+              <p className="text-gray-700">
+                Currently, this calculator graphs one function at a time. To compare functions, graph them separately and note key features. 
+                For homework requiring multiple graphs, you can adjust the function and take screenshots of each, or sketch them on paper 
+                using the coordinates from the table of values.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How do I use this for calculus homework?</h3>
+              <p className="text-gray-700">
+                Use the graphing calculator to: (1) <strong>Visualize derivatives</strong> - graph f(x) and estimate slope at points, 
+                (2) <strong>Find critical points</strong> - look for max/min where slope is zero, (3) <strong>Understand integrals</strong> - 
+                visualize area under curves, (4) <strong>Verify solutions</strong> - check if your algebraic work matches the graph. 
+                Always show your analytical work on assignments!
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What's the difference between radians and degrees?</h3>
+              <p className="text-gray-700">
+                This calculator uses <strong>radians</strong> for trigonometric functions (sin, cos, tan). In radians, a full circle is 2π 
+                (about 6.28) instead of 360°. For calculus and most advanced math, always use radians. To convert: radians = degrees × π/180. 
+                For example, 90° = π/2 radians ≈ 1.57.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
