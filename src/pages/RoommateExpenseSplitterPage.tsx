@@ -494,6 +494,255 @@ const RoommateExpenseSplitterPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* How to Use Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use the Roommate Expense Splitter</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 1: Add Roommates</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Enter names for each roommate (up to 6 people)</li>
+                <li>Click "Add Roommate" to add more people</li>
+                <li>Use real names or nicknames for easy identification</li>
+                <li>Remove roommates by clicking the trash icon</li>
+              </ol>
+            </div>
+
+            <div className="bg-teal-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 2: Add Expenses</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Enter expense description (e.g., "Rent", "Electricity")</li>
+                <li>Enter the total amount paid</li>
+                <li>Select who paid for this expense</li>
+                <li>Choose equal or custom split</li>
+              </ol>
+            </div>
+
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 3: Choose Split Type</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li><strong>Equal Split:</strong> Divides expense evenly among all roommates</li>
+                <li><strong>Custom Shares:</strong> Set different shares for each person (e.g., 1, 2, 1.5)</li>
+                <li>Custom shares are proportional (2 = double share)</li>
+                <li>Use for unequal room sizes or usage</li>
+              </ul>
+            </div>
+
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 4: Calculate & Settle</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Click "Calculate Splits" to see results</li>
+                <li>View who owes what in the summary panel</li>
+                <li>See settlement instructions (who pays whom)</li>
+                <li>Use Venmo, Zelle, or Cash App to transfer money</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        {/* What is Expense Splitting Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Roommate Expense Splitting?</h2>
+
+          <div className="prose max-w-none text-gray-700">
+            <p className="text-lg mb-6">
+              Roommate expense splitting is the process of fairly dividing shared costs among people living together. 
+              This calculator helps you track who paid what, calculate fair shares, and determine who owes money to whom. 
+              It's essential for maintaining financial transparency and avoiding conflicts in shared living situations.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Common Shared Expenses</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Housing Costs</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Rent:</strong> Usually split equally, or by room size</li>
+                  <li><strong>Security Deposit:</strong> Split equally at move-in</li>
+                  <li><strong>Renters Insurance:</strong> Can be individual or shared</li>
+                  <li><strong>Parking Fees:</strong> Split by number of cars</li>
+                </ul>
+              </div>
+
+              <div className="bg-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Utilities</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Electricity:</strong> Usually split equally</li>
+                  <li><strong>Water/Sewer:</strong> Split equally or by usage</li>
+                  <li><strong>Gas/Heat:</strong> Split equally</li>
+                  <li><strong>Internet/Cable:</strong> Split equally among users</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Household Items</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Groceries:</strong> Can be individual or shared</li>
+                  <li><strong>Cleaning Supplies:</strong> Split equally</li>
+                  <li><strong>Toilet Paper/Paper Towels:</strong> Split equally</li>
+                  <li><strong>Furniture:</strong> Discuss ownership before buying</li>
+                </ul>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Other Expenses</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li><strong>Streaming Services:</strong> Split among users</li>
+                  <li><strong>Pest Control:</strong> Split equally</li>
+                  <li><strong>Maintenance/Repairs:</strong> Depends on cause</li>
+                  <li><strong>Moving Costs:</strong> Individual responsibility</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Split Methods Explained</h3>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Equal Split</h4>
+                <p className="mb-3">
+                  Divides the expense evenly among all roommates. Best for utilities, cleaning supplies, and shared items 
+                  where everyone benefits equally.
+                </p>
+                <p className="text-sm bg-white p-3 rounded">
+                  <strong>Example:</strong> $1,200 rent ÷ 3 roommates = $400 each
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Custom Shares (Proportional)</h4>
+                <p className="mb-3">
+                  Splits expense based on different shares for each person. Use when rooms are different sizes, 
+                  or usage varies significantly.
+                </p>
+                <p className="text-sm bg-white p-3 rounded">
+                  <strong>Example:</strong> $1,200 rent, shares 2:1:1 (master bedroom gets 2 shares)<br/>
+                  Total shares = 4, so $1,200 ÷ 4 = $300 per share<br/>
+                  Master bedroom: $600, Others: $300 each
+                </p>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Best Practices for Roommates</h3>
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">📝</span>
+                  <div>
+                    <strong className="text-gray-900">Document Everything:</strong> Keep receipts and track all shared expenses. 
+                    Use this calculator monthly to stay organized and avoid disputes.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">💬</span>
+                  <div>
+                    <strong className="text-gray-900">Communicate Clearly:</strong> Discuss and agree on split methods before 
+                    expenses occur. Be transparent about financial situations.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">⏰</span>
+                  <div>
+                    <strong className="text-gray-900">Set Payment Deadlines:</strong> Agree on when payments are due (e.g., 
+                    within 3 days of calculation). Use payment apps for quick transfers.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">🔄</span>
+                  <div>
+                    <strong className="text-gray-900">Rotate Responsibilities:</strong> Take turns paying bills to distribute 
+                    the burden. Calculate and settle monthly to avoid large balances.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">📱</span>
+                  <div>
+                    <strong className="text-gray-900">Use Digital Payments:</strong> Venmo, Zelle, Cash App, or PayPal make 
+                    transfers instant and trackable. Keep payment confirmations.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Should rent be split equally or by room size?</h3>
+              <p className="text-gray-700">
+                It depends on your agreement. <strong>Equal split</strong> is simpler and works well when rooms are similar. 
+                <strong>Split by room size</strong> is fairer when one person has a master bedroom or significantly larger space. 
+                Use custom shares (e.g., 1.5 for master, 1 for others) to account for size differences. Discuss and agree before 
+                signing the lease.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How do we handle someone who uses more utilities?</h3>
+              <p className="text-gray-700">
+                For most utilities (electricity, water), equal split is standard since usage is hard to track individually. 
+                If someone consistently uses significantly more (e.g., long showers, AC on 24/7), have a conversation about 
+                conservation or consider custom shares. For internet, split equally among users. For streaming services, 
+                only charge people who actually use them.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What if someone can't pay their share on time?</h3>
+              <p className="text-gray-700">
+                Communicate early if you're having financial difficulties. Options: (1) Set up a payment plan, (2) Temporarily 
+                adjust responsibilities (they do more chores), (3) Have them pay their share of rent/utilities directly to landlord/utility. 
+                <strong>Important:</strong> If someone consistently can't pay, they may need to find a more affordable living situation. 
+                Don't let unpaid balances accumulate - address issues immediately.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How often should we calculate and settle expenses?</h3>
+              <p className="text-gray-700">
+                <strong>Monthly</strong> is ideal for most roommate situations. Calculate all shared expenses at the end of each month 
+                and settle within a week. This prevents large balances from building up and keeps finances transparent. For large 
+                one-time expenses (furniture, security deposit), settle immediately. Use this calculator to track running totals 
+                throughout the month.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Should groceries be shared or individual?</h3>
+              <p className="text-gray-700">
+                This varies by household. <strong>Shared groceries</strong> work well if you eat together and have similar diets - 
+                split costs equally or rotate who shops. <strong>Individual groceries</strong> are clearer if you have different 
+                schedules, diets, or eating habits - label your food and buy your own. Many roommates do a hybrid: share staples 
+                (milk, bread, eggs) and keep special items individual.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What about couples living with roommates?</h3>
+              <p className="text-gray-700">
+                Couples typically count as <strong>two people</strong> for most expenses. For rent, they might pay 1.5x a single 
+                person's share if sharing one bedroom (since they use less space per person). For utilities and groceries, they 
+                should pay double since they're two people using resources. Use custom shares to set this up: if 3 people total 
+                (1 couple + 1 single), use shares like 1:1:0.5 for rent, or 2:1 for utilities.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How do we handle someone moving out mid-month?</h3>
+              <p className="text-gray-700">
+                Calculate their share <strong>pro-rated by days</strong>. For example, if they move out on the 15th of a 30-day month, 
+                they pay 15/30 = 50% of that month's expenses. Settle all outstanding balances before they leave. For security deposit, 
+                the new roommate typically pays the leaving roommate directly (not through the landlord). Document everything in writing 
+                and get signatures.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -323,6 +323,245 @@ const IDREstimatorPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* How to Use Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Use the IDR Estimator</h2>
+          
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 1: Enter Loan Information</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Enter your total federal student loan balance</li>
+                <li>Include all federal loans (Direct, Stafford, PLUS)</li>
+                <li>Don't include private loans (they don't qualify for IDR)</li>
+                <li>Find your balance on studentaid.gov or loan servicer website</li>
+              </ol>
+            </div>
+
+            <div className="bg-teal-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 2: Enter Income Details</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Enter your annual gross income (before taxes)</li>
+                <li>Use your most recent tax return or pay stubs</li>
+                <li>Include salary, wages, and other taxable income</li>
+                <li>Don't include non-taxable income</li>
+              </ol>
+            </div>
+
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Step 3: Family & Location</h3>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Select your family size (yourself + dependents)</li>
+                <li>Choose your state of residence</li>
+                <li>Select the IDR plan you're considering</li>
+                <li>Click "Calculate Payment" to see results</li>
+              </ol>
+            </div>
+
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Pro Tips</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li>SAVE plan offers the lowest payments (5%)</li>
+                <li>Compare all plans to find the best fit</li>
+                <li>Consider forgiveness timeline (20-25 years)</li>
+                <li>Recertify income annually to maintain IDR</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* What is IDR Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">What is Income-Driven Repayment (IDR)?</h2>
+
+          <div className="prose max-w-none text-gray-700">
+            <p className="text-lg mb-6">
+              Income-Driven Repayment (IDR) plans are federal student loan repayment options that set your monthly payment 
+              based on your income and family size, rather than the amount you owe. These plans can make your payments more 
+              affordable and offer loan forgiveness after 20-25 years of qualifying payments.
+            </p>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Available IDR Plans</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">SAVE Plan (Newest & Best)</h4>
+                <div className="space-y-2">
+                  <p><strong className="text-green-900">Payment:</strong> 5% of discretionary income for undergraduate loans</p>
+                  <p><strong className="text-green-900">Forgiveness:</strong> 20 years (undergraduate), 25 years (graduate)</p>
+                  <p><strong className="text-green-900">Interest:</strong> No unpaid interest capitalization</p>
+                  <p className="text-sm mt-3">
+                    <strong>Best for:</strong> Most borrowers, especially those with lower incomes or undergraduate loans. 
+                    Offers the lowest payments and best interest benefits.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-teal-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">PAYE (Pay As You Earn)</h4>
+                <div className="space-y-2">
+                  <p><strong className="text-teal-900">Payment:</strong> 10% of discretionary income</p>
+                  <p><strong className="text-teal-900">Forgiveness:</strong> 20 years</p>
+                  <p><strong className="text-teal-900">Cap:</strong> Never more than standard 10-year payment</p>
+                  <p className="text-sm mt-3">
+                    <strong>Best for:</strong> New borrowers (first loan after Oct 1, 2007) with moderate to high debt. 
+                    Good if you expect significant income growth.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">REPAYE (Revised PAYE)</h4>
+                <div className="space-y-2">
+                  <p><strong className="text-blue-900">Payment:</strong> 10% of discretionary income</p>
+                  <p><strong className="text-blue-900">Forgiveness:</strong> 20 years (undergraduate), 25 years (graduate)</p>
+                  <p><strong className="text-blue-900">Interest:</strong> Government pays 50% of unpaid interest</p>
+                  <p className="text-sm mt-3">
+                    <strong>Best for:</strong> All borrowers, especially those with graduate loans. No payment cap, 
+                    so payments can exceed standard plan if income is very high.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">IBR (Income-Based Repayment)</h4>
+                <div className="space-y-2">
+                  <p><strong className="text-purple-900">Payment:</strong> 10% or 15% of discretionary income</p>
+                  <p><strong className="text-purple-900">Forgiveness:</strong> 20 or 25 years (depends on when you borrowed)</p>
+                  <p><strong className="text-purple-900">Cap:</strong> Never more than standard 10-year payment</p>
+                  <p className="text-sm mt-3">
+                    <strong>Best for:</strong> Older borrowers (first loan before July 1, 2014). Consider SAVE or PAYE 
+                    if you're a newer borrower.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 p-6 rounded-lg">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">ICR (Income-Contingent Repayment)</h4>
+                <div className="space-y-2">
+                  <p><strong className="text-yellow-900">Payment:</strong> 20% of discretionary income OR fixed 12-year payment</p>
+                  <p><strong className="text-yellow-900">Forgiveness:</strong> 25 years</p>
+                  <p><strong className="text-yellow-900">Note:</strong> Generally highest payments among IDR plans</p>
+                  <p className="text-sm mt-3">
+                    <strong>Best for:</strong> Parent PLUS consolidation loans (only IDR option). Most other borrowers 
+                    should choose a different plan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Key Benefits of IDR Plans</h3>
+            <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg">
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">💰</span>
+                  <div>
+                    <strong className="text-gray-900">Lower Monthly Payments:</strong> Payments based on what you can afford, 
+                    not what you owe. Can be as low as $0/month if income is very low.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">🎓</span>
+                  <div>
+                    <strong className="text-gray-900">Loan Forgiveness:</strong> Remaining balance forgiven after 20-25 years 
+                    of qualifying payments. Also eligible for Public Service Loan Forgiveness (PSLF) after 10 years.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">📊</span>
+                  <div>
+                    <strong className="text-gray-900">Flexible Payments:</strong> Payments adjust as your income changes. 
+                    If you lose your job or income drops, your payment can decrease.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 text-xl">🛡️</span>
+                  <div>
+                    <strong className="text-gray-900">Financial Protection:</strong> Prevents default and protects credit score. 
+                    Easier to manage than standard repayment if you have high debt relative to income.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+          
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Which IDR plan should I choose?</h3>
+              <p className="text-gray-700">
+                For most borrowers, the <strong>SAVE plan</strong> is the best choice because it offers the lowest payments (5% vs 10%) 
+                and best interest benefits. If you're not eligible for SAVE, choose <strong>PAYE</strong> if you're a newer borrower 
+                (first loan after Oct 2007) or <strong>REPAYE</strong> if you have graduate loans. Use this calculator to compare 
+                estimated payments across different plans.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Do private student loans qualify for IDR?</h3>
+              <p className="text-gray-700">
+                <strong>No.</strong> Income-Driven Repayment plans are only available for federal student loans (Direct Loans, 
+                Federal Stafford Loans, Federal PLUS Loans, and Federal Consolidation Loans). Private student loans from banks 
+                or credit unions do not qualify. If you have private loans, contact your lender about their hardship or 
+                income-based options.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How is discretionary income calculated?</h3>
+              <p className="text-gray-700">
+                Discretionary income = Your annual income minus 150% of the federal poverty guideline for your family size and state. 
+                For example, if the poverty guideline is $15,000 for a single person, 150% is $22,500. If you earn $40,000, your 
+                discretionary income is $17,500 ($40,000 - $22,500). Your IDR payment is then a percentage of this amount.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Will I pay more in total with an IDR plan?</h3>
+              <p className="text-gray-700">
+                <strong>Possibly, but not always.</strong> Because IDR extends your repayment period to 20-25 years (vs 10 years standard), 
+                you may pay more interest over time. However, if you qualify for loan forgiveness, you'll pay less overall. Also, 
+                the SAVE plan's interest subsidy can significantly reduce total costs. The key benefit is <strong>affordability</strong> - 
+                lower monthly payments that fit your budget.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">What happens if my income increases?</h3>
+              <p className="text-gray-700">
+                Your payment will increase proportionally when you recertify your income annually. However, PAYE and IBR have a 
+                <strong> payment cap</strong> - your payment will never exceed what you would pay on the standard 10-year plan. 
+                REPAYE and SAVE don't have this cap, so payments can continue to increase with income. You can always switch 
+                to a different repayment plan if your financial situation changes significantly.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How do I apply for an IDR plan?</h3>
+              <p className="text-gray-700">
+                Apply online at <strong>studentaid.gov</strong> using the Income-Driven Repayment Plan Request form. You'll need 
+                your FSA ID, income information (tax return or pay stubs), and family size. Your loan servicer will process the 
+                application and notify you of approval. The process typically takes 2-4 weeks. You must recertify your income 
+                and family size annually to stay on the plan.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Is forgiven debt taxable?</h3>
+              <p className="text-gray-700">
+                As of 2024, <strong>no</strong> - forgiven federal student loan debt under IDR plans is not taxable through 2025 
+                (extended by the American Rescue Plan). After 2025, tax treatment is uncertain and may change. However, loans 
+                forgiven through <strong>Public Service Loan Forgiveness (PSLF)</strong> are always tax-free. Monitor federal 
+                legislation for updates on the tax treatment of forgiven student loans.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
