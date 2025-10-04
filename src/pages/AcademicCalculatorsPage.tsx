@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare } from 'lucide-react';
+import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AcademicCalculatorsPage: React.FC = () => {
@@ -27,6 +27,14 @@ const AcademicCalculatorsPage: React.FC = () => {
       link: '/academic/graphing',
       color: 'from-blue-500 to-teal-500',
       courses: ['Calculus', 'Engineering', 'Economics', 'Advanced Mathematics']
+    },
+    {
+      title: 'Physics/Engineering Solver',
+      description: 'STEM students who need quick answers for common complex equations. Pre-built templates for quadratic equations, energy/velocity calculations, and circuit laws (Ohm\'s Law).',
+      icon: Zap,
+      link: '/academic/physics-solver',
+      color: 'from-orange-500 to-red-500',
+      courses: ['Physics', 'Engineering', 'Chemistry', 'Mechanics', 'Electronics']
     }
   ];
 

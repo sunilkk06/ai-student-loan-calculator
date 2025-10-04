@@ -107,6 +107,17 @@ const AIAssistant: React.FC = () => {
       action: { type: 'navigate', path: '/academic/graphing' }
     },
 
+    // Physics/Engineering
+    'physics|engineering|formula|ohm|kinetic|velocity|force|energy|circuit|quadratic': {
+      response: "Our Physics/Engineering Solver has pre-built templates for common equations! Solve quadratic equations, calculate energy/velocity, use Ohm's Law, and more. Perfect for STEM students!",
+      suggestions: [
+        "Open physics solver",
+        "Calculate kinetic energy",
+        "Solve Ohm's Law"
+      ],
+      action: { type: 'navigate', path: '/academic/physics-solver' }
+    },
+
     // Refinancing
     'refinance|refinancing|lower interest|consolidate': {
       response: "Refinancing can lower your interest rate and monthly payment, but you'll lose federal benefits like IDR and forgiveness. It's best for high-income borrowers with good credit and private loans.",
