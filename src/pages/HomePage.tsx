@@ -95,54 +95,119 @@ const HomePage: React.FC = () => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-sm font-semibold">AI-Powered Financial Tools for Students</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Smart Calculators for
-              <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                Smarter Students
-              </span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Free online calculators designed specifically for college students. Calculate loans, 
-              get AI insights, and make informed financial decisions.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+            {/* Left Side - Text Content */}
+            <div className="text-center lg:text-left">
+              <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm font-semibold">AI-Powered Financial Tools for Students</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                Smart Calculators for
+                <span className="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                  Smarter Students
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Free online calculators designed specifically for college students. Calculate loans, 
+                get AI insights, and make informed financial decisions.
+              </p>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search calculators..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-2xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/50 shadow-2xl"
-                />
+              {/* Search Bar */}
+              <div className="mb-8">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search calculators..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-2xl text-gray-900 text-lg focus:outline-none focus:ring-4 focus:ring-white/50 shadow-2xl"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Link
+                  to="/calculators"
+                  className="inline-flex items-center justify-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all"
+                >
+                  <Calculator className="w-5 h-5" />
+                  <span>Explore Calculators</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  to="/calculators/student-loan"
+                  className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
+                >
+                  <DollarSign className="w-5 h-5" />
+                  <span>Calculate Loan</span>
+                </Link>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/calculators"
-                className="inline-flex items-center justify-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all"
-              >
-                <Calculator className="w-5 h-5" />
-                <span>Explore Calculators</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/calculators/student-loan"
-                className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all"
-              >
-                <DollarSign className="w-5 h-5" />
-                <span>Calculate Loan</span>
-              </Link>
+            {/* Right Side - Interactive Calculator Display */}
+            <div className="hidden lg:block">
+              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                  {/* Calculator Header */}
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4">
+                    <h3 className="text-white font-bold text-lg flex items-center gap-2">
+                      <Calculator className="w-5 h-5" />
+                      Student Loan Calculator
+                    </h3>
+                  </div>
+                  
+                  {/* Calculator Display */}
+                  <div className="p-6 space-y-4">
+                    {/* Display Screen */}
+                    <div className="bg-gray-900 rounded-lg p-4 mb-4">
+                      <div className="text-right">
+                        <div className="text-gray-400 text-sm mb-1">Monthly Payment</div>
+                        <div className="text-green-400 text-3xl font-bold font-mono">$295.00</div>
+                      </div>
+                    </div>
+
+                    {/* Input Fields */}
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600 text-sm">Loan Amount</span>
+                        <span className="text-gray-900 font-semibold">$25,000</span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600 text-sm">Interest Rate</span>
+                        <span className="text-gray-900 font-semibold">4.5%</span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600 text-sm">Loan Term</span>
+                        <span className="text-gray-900 font-semibold">10 years</span>
+                      </div>
+                    </div>
+
+                    {/* Quick Stats */}
+                    <div className="grid grid-cols-2 gap-3 pt-4 border-t">
+                      <div className="text-center p-3 bg-blue-50 rounded-lg">
+                        <div className="text-blue-600 text-xs font-semibold mb-1">Total Interest</div>
+                        <div className="text-gray-900 font-bold">$10,400</div>
+                      </div>
+                      <div className="text-center p-3 bg-purple-50 rounded-lg">
+                        <div className="text-purple-600 text-xs font-semibold mb-1">Total Paid</div>
+                        <div className="text-gray-900 font-bold">$35,400</div>
+                      </div>
+                    </div>
+
+                    {/* CTA Button */}
+                    <Link
+                      to="/calculators/student-loan"
+                      className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+                    >
+                      Try Full Calculator →
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
