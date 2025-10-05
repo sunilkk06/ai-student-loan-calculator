@@ -23,6 +23,14 @@ const CalculatorsPage: React.FC = () => {
           link: '/calculators/budget-planner',
           color: 'from-blue-500 to-purple-500',
           tags: ['Budgeting', 'Money Management']
+        },
+        {
+          title: 'Time Value of Money (TVM)',
+          description: 'Calculate FV, PV, Interest Rate, and Periods. The backbone of finance courses.',
+          icon: TrendingUp,
+          link: '/calculators/tvm',
+          color: 'from-indigo-500 to-purple-500',
+          tags: ['Finance', 'Investment']
         }
       ]
     },

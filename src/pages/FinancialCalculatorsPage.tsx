@@ -19,6 +19,14 @@ const FinancialCalculatorsPage: React.FC = () => {
       link: '/calculators/budget-planner',
       color: 'from-blue-500 to-purple-500',
       courses: ['Budgeting', 'Financial Planning', 'Money Management']
+    },
+    {
+      title: 'Time Value of Money (TVM)',
+      description: 'The backbone of finance. Calculate Future Value, Present Value, Interest Rate, Number of Periods, and Payment amounts. Essential for investment decisions.',
+      icon: TrendingUp,
+      link: '/calculators/tvm',
+      color: 'from-indigo-500 to-purple-500',
+      courses: ['Finance', 'Investment', 'Economics', 'Business']
     }
   ];
 
