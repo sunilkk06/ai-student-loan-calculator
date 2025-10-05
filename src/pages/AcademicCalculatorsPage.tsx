@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare, Zap, BookOpen } from 'lucide-react';
+import { Calculator, GraduationCap, Brain, BarChart, FunctionSquare, Zap, BookOpen, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const AcademicCalculatorsPage: React.FC = () => {
@@ -43,6 +43,14 @@ const AcademicCalculatorsPage: React.FC = () => {
       link: '/academic/citation-formatter',
       color: 'from-indigo-500 to-purple-500',
       courses: ['English', 'Research', 'Writing', 'All Subjects']
+    },
+    {
+      title: 'Grade/GPA Calculator',
+      description: 'Calculate required grades on finals or future courses to achieve target GPA. Essential for maintaining scholarships and academic standing.',
+      icon: Award,
+      link: '/academic/grade-calculator',
+      color: 'from-green-500 to-teal-500',
+      courses: ['All Students', 'Academic Planning', 'Scholarships']
     }
   ];
 

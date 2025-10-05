@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, TrendingUp, DollarSign, PieChart, Wallet, GraduationCap, BarChart, FunctionSquare, Zap, BookOpen, FileText, Users } from 'lucide-react';
+import { Calculator, TrendingUp, DollarSign, PieChart, Wallet, GraduationCap, BarChart, FunctionSquare, Zap, BookOpen, FileText, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CalculatorsPage: React.FC = () => {
@@ -77,6 +77,14 @@ const CalculatorsPage: React.FC = () => {
           link: '/academic/citation-formatter',
           color: 'from-indigo-500 to-purple-500',
           tags: ['Writing', 'Research']
+        },
+        {
+          title: 'Grade/GPA Calculator',
+          description: 'Calculate required grades to achieve target GPA. Essential for scholarships.',
+          icon: Award,
+          link: '/academic/grade-calculator',
+          color: 'from-green-500 to-teal-500',
+          tags: ['GPA', 'Academic Planning']
         }
       ]
     },
