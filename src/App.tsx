@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop';
 import AIAssistant from './components/AIAssistant';
 import HomePage from './pages/HomePage';
 import CalculatorsPage from './pages/CalculatorsPage';
+import FinancialCalculatorsPage from './pages/FinancialCalculatorsPage';
 import ScientificCalculatorPage from './pages/ScientificCalculatorPage';
 import StudentLoanCalculatorPage from './pages/StudentLoanCalculatorPage';
 import BudgetPlannerPage from './pages/BudgetPlannerPage';
@@ -34,6 +35,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/calculators" element={<CalculatorsPage />} />
+            <Route path="/financial-calculators" element={<FinancialCalculatorsPage />} />
             <Route path="/calculators/scientific" element={<ScientificCalculatorPage />} />
             <Route path="/calculators/student-loan" element={<StudentLoanCalculatorPage />} />
             <Route path="/calculators/budget-planner" element={<BudgetPlannerPage />} />

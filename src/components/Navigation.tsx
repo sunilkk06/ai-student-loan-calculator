@@ -26,7 +26,7 @@ const Navigation: React.FC = () => {
               <BarChart2 className="w-4 h-4" />
               <span>Compare</span>
             </Link>
-            <Link to="/calculators" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
+            <Link to="/financial-calculators" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer">
               <DollarSign className="w-4 h-4" />
               <span>Financial Calculators</span>
             </Link>
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
                 <BarChart2 className="w-4 h-4" />
                 <span>Compare</span>
               </Link>
-              <Link to="/calculators" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/financial-calculators" className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors cursor-pointer" onClick={() => setIsMenuOpen(false)}>
                 <DollarSign className="w-4 h-4" />
                 <span>Financial Calculators</span>
               </Link>
