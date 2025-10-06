@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, Wallet, Calculator, PiggyBank, TrendingUp } from 'lucide-react';
+import { DollarSign, Wallet, Calculator, PiggyBank, TrendingUp, GraduationCap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FinancialCalculatorsPage: React.FC = () => {
@@ -27,6 +27,14 @@ const FinancialCalculatorsPage: React.FC = () => {
       link: '/calculators/tvm',
       color: 'from-indigo-500 to-purple-500',
       courses: ['Finance', 'Investment', 'Economics', 'Business']
+    },
+    {
+      title: 'Tuition Cost Projector',
+      description: 'Estimate total future tuition costs by factoring in expected annual increases. Takes current cost, inflation rate, and years to degree to project future total cost.',
+      icon: GraduationCap,
+      link: '/calculators/tuition-projector',
+      color: 'from-purple-500 to-pink-500',
+      courses: ['College Planning', 'Financial Planning', 'Budgeting']
     }
   ];
 
@@ -45,7 +53,7 @@ const FinancialCalculatorsPage: React.FC = () => {
         </div>
 
         {/* Calculator Grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
         {calculators.map((calc, index) => {
           const Icon = calc.icon;
           return (

@@ -25,6 +25,7 @@ import RoommateExpenseSplitterPage from './pages/RoommateExpenseSplitterPage';
 import CollegeSavingsPage from './pages/CollegeSavingsPage';
 import FinancialAidEstimatorPage from './pages/FinancialAidEstimatorPage';
 import TVMCalculatorPage from './pages/TVMCalculatorPage';
+import TuitionCostProjectorPage from './pages/TuitionCostProjectorPage';
 import HelpPage from './pages/HelpPage';
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
             <Route path="/calculators/student-loan" element={<StudentLoanCalculatorPage />} />
             <Route path="/calculators/budget-planner" element={<BudgetPlannerPage />} />
             <Route path="/calculators/tvm" element={<TVMCalculatorPage />} />
+            <Route path="/calculators/tuition-projector" element={<TuitionCostProjectorPage />} />
             <Route path="/insights" element={<AIInsightsPage />} />
             <Route path="/comparison" element={<LoanComparisonPage />} />
             <Route path="/refinancing" element={<RefinancingPage />} />

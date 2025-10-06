@@ -42,7 +42,7 @@ const AIAssistant: React.FC = () => {
     },
     
     // Student Loans
-    'student loan|loan payment|loan calculator': {
+    'student loan calculator|loan payment calculator|calculate loan|monthly payment': {
       response: "I can help you calculate your student loan payments! Our Student Loan Calculator shows monthly payments, total interest, and amortization schedules. Would you like me to take you there?",
       suggestions: [
         "Yes, take me to the calculator",
@@ -53,7 +53,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // IDR Plans
-    'idr|income driven|income-driven|repayment plan|save|paye|repaye': {
+    'idr estimator|income driven repayment|income-driven|idr plan|save plan|paye plan|repaye plan': {
       response: "Income-Driven Repayment (IDR) plans set your monthly payment based on your income and family size. The SAVE plan offers the lowest payments at 5% of discretionary income. I can help you estimate your payment!",
       suggestions: [
         "Calculate my IDR payment",
@@ -64,7 +64,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Roommate Expenses
-    'roommate|split|expense|rent|utilities|bills': {
+    'roommate expense|split expenses|expense splitter|split rent|split utilities|split bills': {
       response: "Need to split expenses with roommates? Our Roommate Expense Splitter handles equal and custom splits for rent, utilities, groceries, and more. It shows you exactly who owes what!",
       suggestions: [
         "Open the expense splitter",
@@ -74,8 +74,19 @@ const AIAssistant: React.FC = () => {
       action: { type: 'navigate', path: '/student-finance/roommate-expense-splitter' }
     },
 
-    // Scientific Calculator
-    'scientific|calculator|math|calculus|trigonometry|sin|cos|tan': {
+    // Tuition Cost Projector - Specific patterns for tuition estimation
+    'tuition projector|tuition cost projector|estimate future tuition|future tuition cost|tuition increase|college cost inflation|project tuition': {
+      response: "Our Tuition Cost Projector helps you estimate future tuition costs by factoring in annual increases! Enter current tuition, inflation rate, and years to see total projected costs for your entire degree.",
+      suggestions: [
+        "Open tuition cost projector",
+        "How much will tuition increase?",
+        "Calculate future college costs"
+      ],
+      action: { type: 'navigate', path: '/calculators/tuition-projector' }
+    },
+
+    // Scientific Calculator - More specific patterns first
+    'scientific calculator|trigonometric|trigonometry|sin|cos|tan|logarithm|exponent|scientific function': {
       response: "Our Scientific Calculator handles trigonometry, logarithms, exponents, and more. Perfect for calculus, physics, and engineering courses. It supports both radians and degrees!",
       suggestions: [
         "Open scientific calculator",
@@ -86,7 +97,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Statistics
-    'statistics|stats|mean|median|standard deviation|variance': {
+    'statistics calculator|stats|mean|median|mode|standard deviation|variance|data analysis': {
       response: "Need to calculate statistics? Our Statistics Calculator computes mean, median, mode, standard deviation, variance, and more. Great for research projects and data analysis!",
       suggestions: [
         "Open statistics calculator",
@@ -97,7 +108,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Graphing
-    'graph|graphing|plot|function|parabola|equation': {
+    'graphing calculator|graph|plot function|parabola|plot equation': {
       response: "Our Graphing Calculator plots functions, finds roots, and shows tables of values. Perfect for calculus, physics, and engineering. You can zoom, pan, and analyze functions visually!",
       suggestions: [
         "Open graphing calculator",
@@ -108,7 +119,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Physics/Engineering
-    'physics|engineering|formula|ohm|kinetic|velocity|force|energy|circuit|quadratic': {
+    'physics solver|engineering solver|physics formula|ohm law|kinetic energy|velocity|force calculation|circuit|quadratic equation': {
       response: "Our Physics/Engineering Solver has pre-built templates for common equations! Solve quadratic equations, calculate energy/velocity, use Ohm's Law, and more. Perfect for STEM students!",
       suggestions: [
         "Open physics solver",
@@ -119,7 +130,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Citation/Bibliography
-    'citation|bibliography|cite|reference|mla|apa|chicago|works cited|format': {
+    'citation formatter|bibliography|cite source|reference|mla format|apa format|chicago style|works cited': {
       response: "Our Citation Formatter helps you create properly formatted citations in MLA, APA, or Chicago style! Perfect for research papers and essays. Format books, articles, and websites easily.",
       suggestions: [
         "Open citation formatter",
@@ -129,8 +140,19 @@ const AIAssistant: React.FC = () => {
       action: { type: 'navigate', path: '/academic/citation-formatter' }
     },
 
+    // Grade/GPA Calculator
+    'grade calculator|gpa calculator|calculate gpa|what grade do i need|target gpa': {
+      response: "Our Grade/GPA Calculator helps you calculate your current GPA and determine what grades you need to achieve your target GPA. Essential for scholarship requirements and academic planning!",
+      suggestions: [
+        "Open grade calculator",
+        "Calculate my GPA",
+        "What grade do I need?"
+      ],
+      action: { type: 'navigate', path: '/academic/grade-calculator' }
+    },
+
     // Refinancing
-    'refinance|refinancing|lower interest|consolidate': {
+    'refinance loan|refinancing|lower interest rate|consolidate loan': {
       response: "Refinancing can lower your interest rate and monthly payment, but you'll lose federal benefits like IDR and forgiveness. It's best for high-income borrowers with good credit and private loans.",
       suggestions: [
         "Learn about refinancing",
@@ -141,7 +163,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Loan Comparison
-    'compare|comparison|which loan|best loan': {
+    'compare loans|loan comparison|which loan is better|best loan option': {
       response: "Use our Loan Comparison tool to compare different loan offers side-by-side. You can see monthly payments, total interest, and total cost to make the best decision.",
       suggestions: [
         "Open loan comparison",
@@ -152,7 +174,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // Budgeting
-    'budget|budgeting|save money|expenses|spending|income|planner': {
+    'budget planner|budgeting tool|track expenses|track spending|manage income': {
       response: "Smart budgeting is key to managing student finances! Our Student Budget Planner helps you track income vs expenses and see your net monthly total. Perfect for managing day-to-day money!",
       suggestions: [
         "Open budget planner",
@@ -163,7 +185,7 @@ const AIAssistant: React.FC = () => {
     },
 
     // College Savings
-    'college savings|529|save for college|education savings|savings plan': {
+    'college savings plan|529 plan|save for college|education savings|savings calculator': {
       response: "Our College Savings Plan Calculator helps families plan ahead! Calculate monthly/annual savings needed to reach your college cost goal and see the power of compound interest over time.",
       suggestions: [
         "Open college savings calculator",
@@ -171,6 +193,28 @@ const AIAssistant: React.FC = () => {
         "What is a 529 plan?"
       ],
       action: { type: 'navigate', path: '/student-finance/college-savings' }
+    },
+
+    // Time Value of Money
+    'tvm calculator|time value of money|present value|future value|financial calculator': {
+      response: "Our Time Value of Money (TVM) Calculator is the backbone of finance! Calculate Future Value, Present Value, Interest Rate, Number of Periods, and Payment amounts. Essential for investment decisions.",
+      suggestions: [
+        "Open TVM calculator",
+        "Calculate future value",
+        "What is present value?"
+      ],
+      action: { type: 'navigate', path: '/calculators/tvm' }
+    },
+
+    // Financial Aid Estimator
+    'financial aid estimator|sai calculator|student aid index|fafsa estimator|pell grant': {
+      response: "Our Financial Aid Estimator helps you estimate your Student Aid Index (SAI) and potential Pell Grant eligibility before filing FAFSA. Get a rough idea of your expected family contribution!",
+      suggestions: [
+        "Open financial aid estimator",
+        "What is SAI?",
+        "Am I eligible for Pell Grant?"
+      ],
+      action: { type: 'navigate', path: '/student-finance/financial-aid-estimator' }
     },
 
     // Financial Advice
@@ -239,7 +283,7 @@ const AIAssistant: React.FC = () => {
         timestamp: new Date(),
         suggestions: [
           "Calculate my student loan payment",
-          "What is an IDR plan?",
+          "Estimate future tuition costs",
           "Help me split expenses with roommates",
           "I need a scientific calculator"
         ]
@@ -252,9 +296,30 @@ const AIAssistant: React.FC = () => {
   const findResponse = (userInput: string): typeof knowledgeBase[string] => {
     const input = userInput.toLowerCase();
     
-    for (const [pattern, response] of Object.entries(knowledgeBase)) {
-      if (pattern === 'default') continue;
-      
+    // Sort patterns by specificity (longer patterns first for better matching)
+    const sortedEntries = Object.entries(knowledgeBase)
+      .filter(([pattern]) => pattern !== 'default')
+      .sort((a, b) => {
+        // Calculate average keyword length for each pattern
+        const avgLengthA = a[0].split('|').reduce((sum, k) => sum + k.length, 0) / a[0].split('|').length;
+        const avgLengthB = b[0].split('|').reduce((sum, k) => sum + k.length, 0) / b[0].split('|').length;
+        return avgLengthB - avgLengthA; // Longer keywords first
+      });
+    
+    // First pass: look for exact phrase matches
+    for (const [pattern, response] of sortedEntries) {
+      const keywords = pattern.split('|');
+      for (const keyword of keywords) {
+        // Check if the keyword appears as a complete phrase (with word boundaries)
+        const regex = new RegExp(`\\b${keyword.replace(/\s+/g, '\\s+')}\\b`, 'i');
+        if (regex.test(input)) {
+          return response;
+        }
+      }
+    }
+    
+    // Second pass: look for partial matches (fallback)
+    for (const [pattern, response] of sortedEntries) {
       const keywords = pattern.split('|');
       if (keywords.some(keyword => input.includes(keyword))) {
         return response;

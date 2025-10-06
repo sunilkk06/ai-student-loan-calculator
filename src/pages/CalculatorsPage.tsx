@@ -31,6 +31,14 @@ const CalculatorsPage: React.FC = () => {
           link: '/calculators/tvm',
           color: 'from-indigo-500 to-purple-500',
           tags: ['Finance', 'Investment']
+        },
+        {
+          title: 'Tuition Cost Projector',
+          description: 'Estimate future tuition costs factoring in annual increases. Plan ahead for total education investment.',
+          icon: GraduationCap,
+          link: '/calculators/tuition-projector',
+          color: 'from-purple-500 to-pink-500',
+          tags: ['College Planning', 'Budgeting']
         }
       ]
     },
