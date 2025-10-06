@@ -45,48 +45,48 @@ const FinancialCalculatorsPage: React.FC = () => {
         </div>
 
         {/* Calculator Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-          {calculators.map((calc, index) => {
-            const Icon = calc.icon;
-            return (
-              <Link
-                key={index}
-                to={calc.link}
-                className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
-              >
-                <div className={`h-3 bg-gradient-to-r ${calc.color}`}></div>
-                <div className="p-8">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${calc.color}`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      {calc.title}
-                    </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        {calculators.map((calc, index) => {
+          const Icon = calc.icon;
+          return (
+            <Link
+              key={index}
+              to={calc.link}
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            >
+              <div className={`h-3 bg-gradient-to-r ${calc.color}`}></div>
+              <div className="p-8">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${calc.color}`}>
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
-                  
-                  <p className="text-gray-600 mb-4 text-lg">
-                    {calc.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {calc.courses.map((course, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold"
-                      >
-                        {course}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
-                    Use Calculator →
-                  </div>
+                  <h2 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    {calc.title}
+                  </h2>
                 </div>
-              </Link>
-            );
-          })}
+                
+                <p className="text-gray-600 mb-4 text-lg">
+                  {calc.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {calc.courses.map((course, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-semibold"
+                    >
+                      {course}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center text-blue-600 font-semibold group-hover:translate-x-2 transition-transform">
+                  Use Calculator →
+                </div>
+              </div>
+            </Link>
+          );
+        })}
         </div>
 
         {/* Why Use Our Calculators Section */}

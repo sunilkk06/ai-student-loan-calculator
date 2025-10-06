@@ -23,6 +23,7 @@ import StudentFinancePage from './pages/StudentFinancePage';
 import IDREstimatorPage from './pages/IDREstimatorPage';
 import RoommateExpenseSplitterPage from './pages/RoommateExpenseSplitterPage';
 import CollegeSavingsPage from './pages/CollegeSavingsPage';
+import FinancialAidEstimatorPage from './pages/FinancialAidEstimatorPage';
 import TVMCalculatorPage from './pages/TVMCalculatorPage';
 import HelpPage from './pages/HelpPage';
 
@@ -54,6 +55,7 @@ function App() {
             <Route path="/student-finance/idr-estimator" element={<IDREstimatorPage />} />
             <Route path="/student-finance/roommate-expense-splitter" element={<RoommateExpenseSplitterPage />} />
             <Route path="/student-finance/college-savings" element={<CollegeSavingsPage />} />
+            <Route path="/student-finance/financial-aid-estimator" element={<FinancialAidEstimatorPage />} />
             <Route path="/help" element={<HelpPage />} />
             <Route path="/about" element={<AboutPage />} />
           </Routes>

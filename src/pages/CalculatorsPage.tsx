@@ -115,6 +115,14 @@ const CalculatorsPage: React.FC = () => {
           link: '/student-finance/college-savings',
           color: 'from-purple-500 to-pink-500',
           tags: ['Savings', 'Planning']
+        },
+        {
+          title: 'Financial Aid Estimator (SAI)',
+          description: 'Estimate Student Aid Index and Pell Grant eligibility before filing FAFSA.',
+          icon: Award,
+          link: '/student-finance/financial-aid-estimator',
+          color: 'from-indigo-500 to-blue-500',
+          tags: ['Financial Aid', 'FAFSA']
         }
       ]
     }

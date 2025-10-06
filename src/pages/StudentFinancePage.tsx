@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calculator, PiggyBank, TrendingUp, FileText, Users, GraduationCap } from 'lucide-react';
+import { Calculator, PiggyBank, TrendingUp, FileText, Users, GraduationCap, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const StudentFinancePage: React.FC = () => {
@@ -27,6 +27,14 @@ const StudentFinancePage: React.FC = () => {
       link: '/student-finance/college-savings',
       color: 'from-purple-500 to-pink-500',
       courses: ['Savings', 'Financial Planning', 'Investment', 'Family Finance']
+    },
+    {
+      title: 'Student Aid Index (SAI) Calculator',
+      description: 'Provides an early estimate of your Student Aid Index and financial aid eligibility before filling out FAFSA. Get a rough idea of potential Pell Grant eligibility and expected family contribution.',
+      icon: Award,
+      link: '/student-finance/financial-aid-estimator',
+      color: 'from-indigo-500 to-blue-500',
+      courses: ['Financial Aid', 'FAFSA', 'College Planning', 'Scholarships']
     }
   ];
 
